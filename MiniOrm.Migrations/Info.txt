@@ -1,0 +1,6 @@
+  Phase 4: Migrations CLI (Task 04)
+  Step 6: Implement the Migration Tool
+  In the MiniOrm.Migrations project:
+   * Implement a MigrationRunner that can inspect the models in the MiniOrm project.
+   * Implement the commands: add, apply, list, rollback.
+   * Handle the creation of the __migrations table in the database to track history.

@@ -1,0 +1,16 @@
+# Solution build
+dotnet new sln -n MiniOrm
+
+# 2 Console App build
+dotnet new console -n MiniOrm
+dotnet new console -n MiniOrm.Migrations
+
+# Add Solution
+dotnet sln add MiniOrm/MiniOrm.csproj
+dotnet sln add MiniOrm.Migrations/MiniOrm.Migrations.csproj
+
+# Refer one project to another
+dotnet add MiniOrm.Migrations/MiniOrm.Migrations.csproj reference MiniOrm/MiniOrm.csproj
+
+# Add Npgsql
+dotnet add MiniOrm/MiniOrm.csproj package Npgsql

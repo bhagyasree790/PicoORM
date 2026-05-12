@@ -1,0 +1,26 @@
+Create the Entity Metadata classes
+  In MiniOrm/Data/, create:
+   * EntityMetadata.cs: A class to hold information about a table (Table name, List of columns, Primary key details).
+   * TypeMapper.cs: A static or utility class that uses Reflection to read a Type and return an EntityMetadata object. It should map C# types to PostgreSQL types (e.g.,
+     int to INTEGER, string to TEXT) as specified in the table on Page 2.
+
+
+
+  Phase 2: Database Connectivity (Task 01)
+  Step 4: Implement DbContext
+  In MiniOrm/Data/DbContext.cs, create the base DbContext class:
+   * It should accept a connection string in the constructor.
+   * It should manage an NpgsqlConnection.
+   * It should have a mechanism to initialize DbSet<T> properties (usually done via reflection in the constructor).
+
+
+
+  Phase 3: The Generic DbSet (Task 03)
+  Step 5: Implement DbSet<T>
+  In MiniOrm/Data/DbSet.cs, implement the generic class DbSet<T>:
+   * It needs access to the NpgsqlConnection from the DbContext.
+   * Implement the CRUD methods: Insert, FindById, GetAll, Update, Delete.
+   * Crucial: Use the TypeMapper to generate SQL dynamically. Do not hardcode table or column names.
+
+
+   

@@ -1,0 +1,5 @@
+Define the Mapping Attributes
+  In MiniOrm/Attributes/, create the following C# files:
+   * TableAttribute.cs: Should take a string Name.
+   * ColumnAttribute.cs: Should take a string Name.
+   * PrimaryKeyAttribute.cs: Inherits from ColumnAttribute or stands alone (the PDF shows it as [PrimaryKey]).

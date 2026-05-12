@@ -1,0 +1,19 @@
+using MiniOrm.Attributes;
+
+namespace MiniOrm.Models;
+
+[Table("products")]
+public class Product
+{
+    [PrimaryKey]
+    public int Id { get; set; }
+    [Column("name")]
+    public string Name { get; set; } = string.Empty;
+    [Column("price")]
+    public decimal Price{ get; set; }
+    [Column("discount")]
+    public decimal? Discount { get; set; }
+    [Column("instock")]
+    public bool InStock {get; set;}
+
+}

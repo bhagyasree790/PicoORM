@@ -1,6 +1,6 @@
 namespace MiniOrm.Attributes;
 
-[AttributeUsage(AttributeTargets.Class)]
+[AttributeUsage(AttributeTargets.Class)]  //Reflection eitake chinbe
 public class TableAttribute : Attribute
 {
     public string Name { get; }

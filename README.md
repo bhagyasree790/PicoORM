@@ -94,7 +94,7 @@ The demo performs the following steps:
 
 ## 🛠️ Implementation Details: Mapping & Filtering
 
-### Type Mapping
+### 🔄 Type Mapping
 The ORM uses the `TypeMapper` class to translate between C# types and PostgreSQL data types. This is achieved through reflection:
 
 1.  **Type Conversion**: The `MapToPostgresType` method inspects the `PropertyType` of each property and maps it to the corresponding PostgreSQL type:
@@ -110,7 +110,7 @@ The ORM uses the `TypeMapper` class to translate between C# types and PostgreSQL
     - For **Reference Types** (e.g., `string?`), it uses `NullabilityInfoContext` to determine if the property is marked as nullable.
     - This ensures that database columns are created with the correct `NULL` or `NOT NULL` constraints.
 
-### Attribute Filtering
+### 🔒 Attribute Filtering
 The ORM uses a "Whitelist" approach for property mapping, ensuring that only intended properties are persisted to the database.
 
 1.  **Table Mapping**: Every entity class must be decorated with the `[Table("name")]` attribute. If it's missing, the ORM will throw an exception during metadata generation.

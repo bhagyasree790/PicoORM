@@ -2,8 +2,8 @@
 using MiniOrm.Data;
 using MiniOrm.Models;
 
-//var connectionString = Environment.GetEnvironmentVariable("MINIORM_CONN");
-var connectionString = "Host=localhost;Port=5432;Database=miniorm;Username=postgres;Password=0987654321";
+var connectionString = Environment.GetEnvironmentVariable("MINIORM_CONN");
+
 if(string.IsNullOrEmpty(connectionString))
 {
     Console.WriteLine("Please set the MINIORM_CONN environment variable with your database connection string.");

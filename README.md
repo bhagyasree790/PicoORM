@@ -8,7 +8,7 @@ The solution consists of two console projects:
 
 *   **MiniOrm/**: The core library containing the `DbContext`, generic `DbSet<T>`, and the `TypeMapper`. It also includes a step-by-step coding demo in `Program.cs`.
 *   **MiniOrm.Migrations/**: A CLI tool for managing database schema changes (creating, applying, and rolling back migrations).
-
+file:///home/bhagyasree/Pictures/Screenshots/Screenshot%20from%202026-05-13%2012-57-24.png
 
 ## Prerequisites
 
